@@ -171,7 +171,6 @@ function getLocation() {
 
 
         yourweather(latitude, longitude);
-       =
 
 
 
